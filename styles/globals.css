@@ -1,16 +1,227 @@
+@font-face {
+  font-family: 'Njord-Regular';
+  src: url('../fonts/Njord-Regular.otf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'Njord-Alternative';
+  src: url("../fonts/Njord-Alternate.otf") format('opentype');
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html,
 body {
+  font-family: "Montserrat", sans-serif;
+}
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
+}
+.navLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 24px;
+  font-style: normal;
+  margin-right: 38px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Njord-Alternative';
+}
+.navLink1 {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  margin-bottom: 20px;
+  border-bottom: 1px solid white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  padding: 6px;
+  font-family: 'Njord-Alternative';
+}
+.navLink:hover,
+.navLink1:hover,
+.socialIcon:hover {
+  color: #ffd700;
+}
+.active{
+  color:'#ffd700'
+}
+.joinTheFight,.animated-paragraph{
+  background: -webkit-linear-gradient(#dadba8, #f1f1d1, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.etherium{
+  background: -webkit-linear-gradient(#99ffff, #99ffff,#b6b1b6, #99ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.line::before{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 3px;
+  background-color: #FBFAF5;
+}
+.clanLine::before{
+  width: 80px;
+}
+.einarr{
+  /* font-size: 72px; (Einarr-Humans) */
+  background: -webkit-linear-gradient( #1e9413, #fffdf5,#1e9413,  #1e9413, #24751c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Valkyr{
+  /* font-size: 72px; (Valkyr-Angels) */
+  background: -webkit-linear-gradient(#ffd700, #ffdc73, #ffbf00, #ffdc73, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Illïr{
+  /* font-size: 72px; (Illir-Devils) */
+  background: -webkit-linear-gradient(#c2321f,#c2321f, #fa8181, #a3200f,  #a3200f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Tölva{
+  /* font-size: 72px; (Tölva-Cyborg) */
+  background: -webkit-linear-gradient(#7e7e7e, #b9b6ab,  #fffdf5, #b9b6ab, #7e7e7e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Jötnar{
+  /* font-size: 72px; (Jötnar-Frost Giants) */
+  background: -webkit-linear-gradient(#5fecf3,#78befc, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#CLAN{
+  background-image: url('../public/images/clan\ background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#footer{
+  background-image: url('../public/images/Footer\ Image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.member1{
+  /* font-size: 72px; (Jötnar-Frost Giants) */
+  background: -webkit-linear-gradient(#5fecf3,#78befc, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* CSS for countdown component */
+/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
+/* * {
+    box-sizing: border-box;
+} */
+
+/* body {
+    font-family: 'Lato', sans-serif;
+} */
+
+.Countdown-main {
+  background-color: black;
+  padding: 40px 0px;
+  width: 100%;
+}
+
+.Countdown-main h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-size: 3.75rem;
+  font-family: 'Njord-Alternative';
+  background: -webkit-linear-gradient(#dadba8, #f1f1d1, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.countdown-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  background: -webkit-linear-gradient(#ffd700, #ffdc73, #ffbf00, #ffdc73, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffd700;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 20px;
+  margin: 30px;
+  padding-top: 10px;
+  position: relative;
+  font-family: 'Njord-Alternative';
+  width: 100px;
+  height: 100px;
+}
+
+.countdown-item span {
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Njord-Alternative';
+  margin-top: 5px;
+  
+}
+.countdown-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 470px) {
+  .Countdown-main h1 {
+    font-size: 2.8rem;
+  }
+}
+#bottom{
+  width: 100%;
+}
+  /* css for main video */
+
+.player-wrapper {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+.react-player {
+  padding: unset;
+  margin: unset;
+}
+video {
+  width: 100%;
+  height: unset;
+  object-fit: cover;
+}
+
+/* css for Link */
+
+#main-link {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
 }
